@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: Notiefy-audit
+  rabbitmq:
+    host: localhost
+    virtual-host: /
+    password: guest
+    username: guest
+    port: 5672
+
+server:
+  port: 8090
+
+rabbitmq:
+  song-added:
+    queue: songAdded
+  song-played:
+    queue: songPlayed
