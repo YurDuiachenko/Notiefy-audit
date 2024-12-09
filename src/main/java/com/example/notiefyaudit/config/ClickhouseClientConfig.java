@@ -1,7 +1,7 @@
 package com.example.notiefyaudit.config;
 
 import com.clickhouse.client.api.Client;
-import com.example.notiefyaudit.rabbitmq.dto.PlayedSong;
+import com.example.notiefyaudit.domain.PlayedSong;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

@@ -1,7 +1,7 @@
 package com.example.notiefyaudit.rabbitmq;
 
 import com.clickhouse.client.api.Client;
-import com.example.notiefyaudit.rabbitmq.dto.PlayedSong;
+import com.example.notiefyaudit.domain.PlayedSong;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -27,8 +27,6 @@ public class SongPlayedEventListener {
             throw new RuntimeException(e);
         }
         System.out.println("Message read from firstQueue : " + song);
-
-        System.out.println(client.ping());
         client.insert("played_song", List.of(song));
     }
 }

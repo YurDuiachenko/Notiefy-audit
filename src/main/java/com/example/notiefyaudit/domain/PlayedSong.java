@@ -1,4 +1,4 @@
-package com.example.notiefyaudit.rabbitmq.dto;
+package com.example.notiefyaudit.domain;
 
 import lombok.Data;
 
