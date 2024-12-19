@@ -13,15 +13,11 @@ public class RabbitMQConfig {
     private String songPlayedQueueName;
     @Value("${rabbitmq.song-count.queue}")
     private String songCountQueueName;
-    @Value("${rabbitmq.song-added.exchange}")
+    @Value("${rabbitmq.song-count.exchange}")
     private String songCountExchangeName;
-    @Value("${rabbitmq.song-added.key}")
+    @Value("${rabbitmq.song-count.key}")
     private String songCountKey;
 
-    @Bean
-    public Queue myQueue() {
-        return new Queue(songPlayedQueueName, false);
-    }
     @Bean
     public Queue songPlayedQueue() {
         return new Queue(songPlayedQueueName, false);
